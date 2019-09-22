@@ -16,11 +16,11 @@ public class FoodTruckApp {
 	public void run(Scanner kb) {
 		FoodTruck[] truckArray = addTrucks(kb);
 
-		for (int i = 0; i < truckArray.length; i++) {// check null, if i find a null, make new array with no nulls
+		for (int i = 0; i < truckArray.length; i++) {// check array for null elements
 			if (truckArray[i] == null) {
 				FoodTruck[] copyArray = new FoodTruck[i];
 
-				for (int j = 0; j < copyArray.length; j++) {
+				for (int j = 0; j < copyArray.length; j++) {// if there are nulls, make a new array without them
 					copyArray[j] = truckArray[j];
 				}
 				truckArray = copyArray;
@@ -46,10 +46,10 @@ public class FoodTruckApp {
 				break;
 			case 2:
 				double avg = 0;
-				for (int i = 0; i < truckArray.length; i++) {// get null if I quit entering trucks. need to make new
-																// array the length of the num. of trucks entered
-					avg += truckArray[i].getRating(); // loop through the array, seeing how many elements aren't null.
-														// make a new array?
+				for (int i = 0; i < truckArray.length; i++) {
+																
+					avg += truckArray[i].getRating(); 
+														
 				}
 				avg /= truckArray.length;
 				System.out.println("Average rating: " + avg);
