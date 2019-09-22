@@ -1,7 +1,5 @@
 package com.skilldistillery.foodtrucks;
 
-import java.util.Scanner;
-
 public class FoodTruck {
 
 	// FIELDS
@@ -9,13 +7,12 @@ public class FoodTruck {
 	private static int nextId = 0;
 	private String name;
 	private String foodType;
-	private int rating;
+	private double rating;
 	private int truckId;
-	private FoodTruck[] truckArray;
-
+	
 	// METHODS
 
-	public FoodTruck(String name, String foodType, int rating) { // constructor
+	public FoodTruck(String name, String foodType, double rating) { // constructor
 		super();
 		this.name = name;
 		this.foodType = foodType;
@@ -49,17 +46,17 @@ public class FoodTruck {
 		this.foodType = foodType;
 	}
 
-	public int getRating() {
+	public double getRating() {
 		return rating;
 	}
 
-	public void setRating(int rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 
 	@Override
 	public String toString() {
-		return "FoodTruck [Name: " + name + ", Food Type: " + foodType + ", Rating: " + rating;
+		return "FoodTruck [Name: " + name + ", Food Type: " + foodType + ", Rating: " + rating + ", ID: " + truckId + "]";
 	}
 
 	// ------------------------------------------------------------------
